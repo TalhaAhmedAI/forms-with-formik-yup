@@ -63,7 +63,7 @@ export const Signup = () => {
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
                             <TextField
-                                error={errors.firstName && touched.firstName}
+                                error={Boolean(errors.firstName && touched.firstName)}
                                 autoComplete="fname"
                                 name="firstName"
                                 variant="outlined"
@@ -77,7 +77,7 @@ export const Signup = () => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <TextField
-                                error={errors.lastName && touched.lastName}
+                                error={Boolean(errors.lastName && touched.lastName)}
                                 variant="outlined"
                                 fullWidth
                                 onChange={handleChange}
@@ -90,7 +90,7 @@ export const Signup = () => {
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
-                                error={errors.email && touched.email}
+                                error={Boolean(errors.email && touched.email)}
                                 variant="outlined"
                                 fullWidth
                                 onChange={handleChange}
@@ -104,7 +104,7 @@ export const Signup = () => {
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
-                                error={errors.password && touched.password}
+                                error={Boolean(errors.password && touched.password)}
                                 variant="outlined"
                                 fullWidth
                                 onChange={handleChange}
