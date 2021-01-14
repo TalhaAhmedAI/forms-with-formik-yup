@@ -20,7 +20,7 @@ export function Multistep() {
                     description: ''
                 }} onSubmit={async (values) => {
                     await sleep(3000)
-                    console.log("values", values)
+                    window.location.href='/'
                 }}>
                         <FormikStep label="Personal Data">
                         <Box paddingBottom={2}>
@@ -93,7 +93,7 @@ export function FormikStepper({ children, ...props}: FormikConfig<FormikValues>)
                 {currentChild}
                 <Grid container spacing={2}>
                 {step > 0 ? <Grid item> <Button disabled={isSubmitting} color="primary" variant="contained" onClick={() => {}}>Back</Button></Grid> : null}
-                <Grid item><Button startIcon={isSubmitting ? <CircularProgress size="1rem" /> :null } disabled={isSubmitting} color="primary" variant="contained" type="submit">{isSubmitting ? 'Submitting' : isLastStep() ? 'Submit' : 'Next'}</Button></Grid>
+                <Grid item><Button startIcon={isSubmitting ? <CircularProgress size="1rem" /> :null } disabled={isSubmitting} color="primary" variant="contained" type="submit">{isSubmitting ? 'Submitting' : isLastStep() ? 'Go to Signup Form' : 'Next'}</Button></Grid>
                 </Grid>
                 </Form>
             )}

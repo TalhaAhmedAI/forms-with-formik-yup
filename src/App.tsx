@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.css';
 
 import { Signup } from './Signup/Signup'
@@ -8,8 +8,12 @@ import {Multistep} from './Multistep/Multistep';
 function App() {
   return (
     <div className="App">
-      {/* <Signup /> */}
-      <Multistep />
+      <Router>
+        <Switch>
+          <Route exact path="/"> <Signup /> </Route>
+          <Route path="/multistep"> <Multistep /> </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

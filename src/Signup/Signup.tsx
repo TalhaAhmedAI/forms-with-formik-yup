@@ -54,8 +54,8 @@ export const Signup = () => {
             password: ''
         }}
         validationSchema={SignupSchema}
-        onSubmit={values => {
-            console.log(values);
+        onSubmit={() => {
+            window.location.href='/multistep'
         }}
     >
     {({errors, handleChange, touched}) => (
@@ -124,7 +124,7 @@ export const Signup = () => {
                         color="primary"
                         className={classes.submit}
                     >
-                        Sign Up
+                        Go to Multistep Form
                     </Button>
                 </Form>
                 )}
